@@ -1,0 +1,3 @@
+Magento Comments Module
+
+The comment module being used with the current quote system is turning quotes into orders on comment submit. I'm just going ahead and writing a new module rather than tracking down the issue that's causing it, the Ebizmarts module is just having a lot of issues right now and I don't want to break the poor thing.
