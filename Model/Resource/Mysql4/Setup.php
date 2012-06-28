@@ -1,6 +1,6 @@
 <?php
 
-class Nathan_Comments_Model_Resource_Mysql4_Setup extends Mage_Core_Model_Resource_Setup
+class Ifi_Comments_Model_Resource_Mysql4_Setup extends Mage_Core_Model_Resource_Setup
 {
 	
 }

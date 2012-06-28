@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
 	<modules>
-		<Nathan_Comments>
+		<Ifi_Comments>
 			<version>0.1.0</version>
-		</Nathan_Comments>
+		</Ifi_Comments>
 	</modules>
 	<frontend>
 		<routers>
 			<comments>
 				<use>standard</use>
 				<args>
-					<module>Nathan_Comments</module>
+					<module>Ifi_Comments</module>
 					<frontName>comments</frontName>
 				</args>
 			</comments>
 		</routers>
 	</frontend>
+	<stores>
+		<admin>
+			<design>
+				<package>
+					<name>default</name>
+				</package>
+				<theme>
+					<default>ifi</default>
+				</theme>
+			</design>
+		</admin>
+	</stores>
 	<global>
 		<models>
 			<comments>
-				<class>Nathan_Comments_Model</class>
+				<class>Ifi_Comments_Model</class>
 				<resourceModel>comments_mysql4</resourceModel>
 			</comments>
 			<comments_mysql4>
-				<class>Nathan_Comments_Model_Mysql4</class>
+				<class>Ifi_Comments_Model_Mysql4</class>
 				<entities>
 					<comment>
-						<table>nathan_comments</table>
+						<table>ifi_comments</table>
 					</comment>
 				</entities>
 			</comments_mysql4>
@@ -34,8 +46,8 @@
 		<resources>
 			<comments_setup>
 				<setup>
-					<module>Nathan_Comments</module>
-					<class>Nathan_Comments_Model_Resource_Mysql4_Setup</class>
+					<module>Ifi_Comments</module>
+					<class>Ifi_Comments_Model_Resource_Mysql4_Setup</class>
 				</setup>
 				<connection>
 					<use>core_setup</use>
