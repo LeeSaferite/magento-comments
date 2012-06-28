@@ -8,7 +8,7 @@
  *@text    	 comment
  *@int     	 comment_id, PRIMARY
  *@int     	 order_id
- *@int		 poster_id
+ *@int		 posater_id
  *@timestamp  timestamp	
  */
 
