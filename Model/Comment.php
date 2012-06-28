@@ -12,7 +12,7 @@ class Nathan_Comments_Model_Comment extends Mage_Core_Model_Abstract
 	 * @param
 	 * int     $order_id
 	 */
-	public function getCommentCollectionByOrderId($order_id) 
+	public function getByOrderId($order_id) 
 	{	
 		$collection = Mage::getModel('comments/comment')->getCollection();
 		$collection->addFilter('order_id', $order_id);
@@ -27,12 +27,12 @@ class Nathan_Comments_Model_Comment extends Mage_Core_Model_Abstract
 	 * text    $comment
 	 * int     $poster_id
 	 */
-	 public function addComment($order_id, $poster_id, $comment) 
+	 public function addComment($order_id, $poster_id, $comment_text) 
 	 {
 	 	$comment = Mage::getModel('comments/comment');
-		$comment->setOrderId(1);
-		$comment->setComment("comment");
-		$comment->setPosterId(2);
+		$comment->setOrderId($order_id);
+		$comment->setComment($comment_text);
+		$comment->setPosterId($poster_id);
 		$comment->save();
 	 }
 }
