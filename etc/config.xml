@@ -47,7 +47,9 @@
 				</connection>
 			</comments_write>
 			<comments_read>
-				<use>core_read</use>
+				<connection>
+					<use>core_read</use>
+				</connection>
 			</comments_read>
 		</resources>
 	</global>
