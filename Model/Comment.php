@@ -6,10 +6,17 @@ class Nathan_Comments_Model_Comment extends Mage_Core_Model_Abstract
 	{
 		$this->_init('comments/comment');
 	}
-	
-	public function getCommentCollection($order_id) {
+	/**
+	 * get all comments with order id $order_id
+	 * 
+	 * @param
+	 * int     $order_id
+	 */
+	public function getCommentCollectionByOrderId($order_id) {
 		{
-			
+			$collection = Mage::getModel('comments/comment')->getCollection();
+			$collection->addFilter('order_id', $order_id);
+			return $collection;
 		}
 	}
 }
